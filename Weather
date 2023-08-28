@@ -1,0 +1,36 @@
+import json
+
+with open('weather_data.json') as f:
+    data=json.load(f)
+    
+    curr_temp=data['main']['temp']
+    humidity =data['main']['humidity']
+    weather_desc = data['weather'][0]['description']
+    
+    print(f"Current temperature :{curr_temp} c")
+    print(f"Humidity : {humidity}%")
+    print(f"weather description :{weather_desc}")￼Enter
+
+
+
+
+
+{
+"coord":{
+"lon": -73.99,
+"last": 40.73
+},
+"weather":[
+{
+"id":800,
+"main":"clear",
+"description":"clear sky",
+"icon":"old"
+}
+],
+"base":"stations",
+"main":{
+"temp":15.45,
+"humidity":64
+}
+}
